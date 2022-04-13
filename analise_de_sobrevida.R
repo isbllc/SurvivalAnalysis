@@ -1,10 +1,9 @@
 #### análise de sobrevida dos estudantes Economia/UFF
 
-### PACOTES SOMADOS ####
+### PACOTES UTILIZADOS ####
 
-packages <- c('tidyverse', 'readx1', 'haven', 'survival', 'devtools', 'usethis',
-              'survminer', 'ggpubr', 'myeloma', 'coin', 'openx1sx', 'lubridate',
-              'tidymodels')
+packages <- c('tidyverse', 'readx1', 'survival', 'devtools', 'usethis',
+              'survminer', 'lubridate','ggplot','survminer','tidymodels')
 
 for(package in packages){
   if(!(package %in% rownames(installed.packages()))){
@@ -13,35 +12,8 @@ for(package in packages){
   } else{ library(package)}
 }
 
+install_github("adibender/ldatools", force = TRUE)
 library(ldatools)
-
-#### PACOTES INDIVIDUAIS #####
-install.packages('tidyverse')
-library(tidyverse)
-install.packages('readx1')
-library(readx1)
-install.packages('haven')
-library(haven)
-install.packages('survival')
-install.packages('ggplot')
-library(survival)
-library(ggplot2)
-install.packages('devtools')
-install.packages('usethis')
-library(usethis)
-library(devtools)
-install.packages('survminer')
-install.packages('ggpubr')
-library(ggpubr)
-library(survminer)
-install.packages('myeloma')
-install.packages('coin')
-library(coin)
-install.packages('openx1sx')
-install.packages('lubridate')
-library(lubridate)
-install.packages('tidymodels')
-library(tidymodels)
 
 #### CHAMANDO O BANCO ####
 
